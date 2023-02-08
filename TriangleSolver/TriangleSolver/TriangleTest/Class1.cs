@@ -26,5 +26,51 @@ namespace TriangleTest
             //Assert
             Assert.AreEqual(expected, actual);
         }
+
+        [Test]
+        public void IsIsosceles_input232_true()
+        {
+            //Arrange
+            string expected = "Based on two sides being equal, the type of triangle is an ISOSCELES";
+            string actual;
+
+            //Act
+            Triangle tri = new Triangle();
+            actual = tri.AnalyzeTriangle(2, 3, 2);
+
+            //Assert
+            Assert.AreEqual(expected, actual);
+        }
+
+
+        [Test]
+        public void IsIsosceles_input223_true()
+        {
+            //Arrange
+            string expected = "Based on two sides being equal, the type of triangle is an ISOSCELES";
+            string actual;
+
+            //Act
+            Triangle tri = new Triangle();
+            actual = tri.AnalyzeTriangle(2, 2, 3);
+
+            //Assert
+            Assert.AreEqual(expected, actual);
+        }
+
+        [Test]
+        public void IsIsosceles_input322_true()
+        {
+            //Arrange
+            string expected = "Based on two sides being equal, the type of triangle is an ISOSCELES";
+            string actual;
+
+            //Act
+            Triangle tri = new Triangle();
+            actual = tri.AnalyzeTriangle(3, 2, 2);
+
+            //Assert
+            Assert.AreEqual(expected, actual);
+        }
     }
 }
