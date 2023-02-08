@@ -152,5 +152,99 @@ namespace TriangleTest
             //Assert
             Assert.AreEqual(expected, actual);
         }
+
+        //ZERO TESTING 
+
+        [Test]
+        public void IsZero_input6_5_0_true()
+        {
+            //Arrange
+            string expected = "At least one side of your triangle has a zero length and is thus invalid";
+            string actual;
+
+            //Act
+            Triangle tri = new Triangle();
+            actual = tri.AnalyzeTriangle(6, 5, 0);
+
+            //Assert
+            Assert.AreEqual(expected, actual);
+        }
+
+        [Test]
+        public void IsZero_input2_0_4_true()
+        {
+            //Arrange
+            string expected = "At least one side of your triangle has a zero length and is thus invalid";
+            string actual;
+
+            //Act
+            Triangle tri = new Triangle();
+            actual = tri.AnalyzeTriangle(2, 0, 4);
+
+            //Assert
+            Assert.AreEqual(expected, actual);
+        }
+
+        [Test]
+        public void IsZero_input0_3_6_true()
+        {
+            //Arrange
+            string expected = "At least one side of your triangle has a zero length and is thus invalid";
+            string actual;
+
+            //Act
+            Triangle tri = new Triangle();
+            actual = tri.AnalyzeTriangle(0,3,6);
+
+            //Assert
+            Assert.AreEqual(expected, actual);
+        }
+
+        //INVALID RESPONSE TESTING
+
+        [Test]
+        public void IsInvalid_input3_3_6_true()
+        {
+            //Arrange
+            string expected = "Based on the values entered, the triangle is INVALID";
+            string actual;
+
+            //Act
+            Triangle tri = new Triangle();
+            actual = tri.AnalyzeTriangle(3, 3,-6);
+
+            //Assert
+            Assert.AreEqual(expected, actual);
+        }
+
+        [Test]
+        public void IsInvalid_input4_5_6_true()
+        {
+            //Arrange
+            string expected = "Based on the values entered, the triangle is INVALID";
+            string actual;
+
+            //Act
+            Triangle tri = new Triangle();
+            actual = tri.AnalyzeTriangle(-4,-5,-9);
+
+            //Assert
+            Assert.AreEqual(expected, actual);
+        }
+
+        [Test]
+        public void IsInvalid_input1_8_9_true()
+        {
+            //Arrange
+            string expected = "Based on the values entered, the triangle is INVALID";
+            string actual;
+
+            //Act
+            Triangle tri = new Triangle();
+            actual = tri.AnalyzeTriangle(1, 8, 9);
+
+            //Assert
+            Assert.AreEqual(expected, actual);
+        }
     }
 }
